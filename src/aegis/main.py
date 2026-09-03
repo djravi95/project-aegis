@@ -1,4 +1,4 @@
-from collector.evidence_collector import EvidenceCollector
+from .collector.evidence_collector import EvidenceCollector
 
 def main():
     collector = EvidenceCollector()
