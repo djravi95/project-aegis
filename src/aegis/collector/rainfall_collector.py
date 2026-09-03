@@ -9,7 +9,7 @@ class RainfallCollector:
     def collect(self, district:str)-> Evidence:
             latest_row = None
 
-            with open("data/raw/rainfall.csv",newline="") as file:
+            with open("data/sample/rainfall.csv",newline="") as file:
                 reader = csv.DictReader(file)
 
             
