@@ -1,4 +1,4 @@
-from .evidence import Evidence
+from ..models.evidence import Evidence
 from datetime import datetime
 import csv
 

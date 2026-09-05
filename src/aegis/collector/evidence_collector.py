@@ -1,6 +1,6 @@
 from .rainfall_collector import RainfallCollector
 from .dem_collector import DemCollector
-from .evidence_package import EvidencePackage
+from ..models.evidence_package import EvidencePackage
 from datetime import datetime
 
 
@@ -27,5 +27,5 @@ class EvidenceCollector:
             )
 
 
-
+    
 

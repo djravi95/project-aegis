@@ -1,5 +1,5 @@
 from datetime import datetime
-from .evidence import Evidence
+from ..models.evidence import Evidence
 import csv
 
 
