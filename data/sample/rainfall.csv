@@ -1,0 +1,4 @@
+district,observation_date,rainfall_mm,source,latitude,longitude
+Hyderabad,2026-09-01,120.5,Sample Dataset,17.3850,78.4867
+Hyderabad,2026-09-02,98.2,Sample Dataset,17.3850,78.4867
+Warangal,2026-09-02,145.3,Sample Dataset,17.9784,79.5941
