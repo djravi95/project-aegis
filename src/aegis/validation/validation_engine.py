@@ -8,39 +8,39 @@ class ValidationEngine:
     """Validates evidences before risk assessment"""
 
     def validate(self,package: EvidencePackage)-> ValidationResult:
-            
-            validated = []
-            missing = []
-            warnings = []
-            status =""
+
+            validation_details ={}
+            warnings =[]
 
             for evidence_name in REQUIRED_EVIDENCE:
 
                 evidence = package.evidences.get(evidence_name)
 
                 if evidence is not None:
-                    validated.append(evidence_name)
+                    validation_details[evidence_name] = "VALID"
 
-                elif evidence is None:
-                    missing.append(evidence_name)
-                    warnings.append(f"Requires evidence '{evidence_name}' is missing.")
+                else:
+                     validation_details[evidence_name] = "MISSING"
+                     warnings.append(f"Required evidence '{evidence_name}' is missing.")
 
+        
+            statuses =list(validation_details.values())
+            valid_count = statuses.count("VALID")
+            missing_count = statuses.count("MISSING")
+                        
+            if valid_count==len(REQUIRED_EVIDENCE):
+                 overall_status="VALID"
 
-            if not missing:
+            elif missing_count == len(REQUIRED_EVIDENCE):
 
-                     status="VALID"
+                     overall_status="INVALID"
 
-            elif not validated:
-
-                     status="INVALID"
-
-            else: status = "PARTIAL"
+            else: overall_status = "PARTIAL"
 
             return ValidationResult(
 
-                   status=status,
-                   validated=validated,
-                   missing=missing,
+                   status=overall_status,
+                   validation_details=validation_details,
                    warnings=warnings,
                    validation_time=datetime.now() 
                  

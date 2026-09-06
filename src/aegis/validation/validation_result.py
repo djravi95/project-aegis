@@ -5,8 +5,7 @@ from datetime import datetime
 class ValidationResult:
 
     status:str
-    validated:list[str]
-    missing:list[str]
+    validation_details:dict[str,str]
     warnings:list[str]
     validation_time:datetime
     
