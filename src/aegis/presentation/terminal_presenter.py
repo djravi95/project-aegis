@@ -34,12 +34,29 @@ class TerminalPresenter:
 
         
 
-        for evidence_name in REQUIRED_EVIDENCE:
+        for evidence_name,status in validation_result.validation_details.items():
                 evidence = package.evidences[evidence_name]
-                print(evidence.name)
-                print(validation_result.status)
+                if status == 'VALID':
+                     symbol= '✓'
+                else: symbol = '✗'
+
+                print(f"{evidence.name:<20}: {symbol} {status}")
+
 
         print()
+        print(f"{'Overall Status':<20}: {validation_result.status}")
+        print()
+        print("-" * 60)
+
+        print("Warnings")
+        print("-" * 60)
+
+        if not validation_result.warnings:
+
+             print("None")
+
+        else: print(f"{validation_result.warnings}")
+
         print("=" * 60)
 
 
