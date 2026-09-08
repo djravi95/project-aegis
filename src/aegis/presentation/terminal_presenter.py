@@ -1,4 +1,4 @@
-from ..validation.validation_result import ValidationResult
+from ..models.validation_result import ValidationResult
 from ..config.required_evidence import REQUIRED_EVIDENCE
 
 class TerminalPresenter:

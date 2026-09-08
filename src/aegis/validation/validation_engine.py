@@ -1,5 +1,5 @@
 from ..models.evidence_package import EvidencePackage
-from .validation_result import ValidationResult
+from ..models.validation_result import ValidationResult
 from ..config.required_evidence import REQUIRED_EVIDENCE
 from datetime import datetime   
 
