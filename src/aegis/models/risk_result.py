@@ -1,14 +1,21 @@
 from datetime import datetime
 from dataclasses import dataclass
+from ..models.assessment_result import AssessmentResult
 
 
 @dataclass
 class RiskResult:
-    overall_risk_level: str
-    overall_risk_score: float
-    evidence_scores: dict[str, float]
-    confidence: float
+
+    risk_level: str
+    risk_score: float
+
+    rainfall_assessment: AssessmentResult | None
+    dem_assessment: AssessmentResult | None
+
     reasons: list[str]
     recommended_actions: list[str]
-    mandatory_evidence_used: list[str]
+
+    confidence: float
+
+
     calculated_at: datetime

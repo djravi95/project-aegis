@@ -10,9 +10,8 @@ def main():
     result = validator.validate(package)
     assessor = RiskEngine()
     risk_assessment = assessor.assess(package,result)
-    print(risk_assessment)
-    #presenter = TerminalPresenter()
-    #presenter.display(package,result)
+    presenter = TerminalPresenter()
+    presenter.display(package,result,risk_assessment)
     #print("Project Aegis is operational.")
 
 
