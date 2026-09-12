@@ -1,7 +1,7 @@
 from ..models.evidence import Evidence
 from ..models.assessment_result import AssessmentResult
 from ..config.risk_threshold import LOW_ELEVATION
-from ..config.risk_scores import HIGH_DEM_SCORE,LOW_DEM_SCORE
+from ..config.risk_weights import HIGH_DEM_SCORE,LOW_DEM_SCORE
 
 
 

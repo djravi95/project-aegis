@@ -1,7 +1,7 @@
 from ..models.evidence import Evidence
 from ..models.assessment_result import AssessmentResult
 from ..config.risk_threshold import LOW_RAINFALL,HIGH_RAINFALL
-from ..config.risk_scores import LOW_RAINFALL_SCORE,HIGH_RAINFALL_SCORE,MEDIUM_RAINFALL_SCORE
+from ..config.risk_weights import LOW_RAINFALL_SCORE,HIGH_RAINFALL_SCORE,MEDIUM_RAINFALL_SCORE
 
 class RainfallAssessor:
 

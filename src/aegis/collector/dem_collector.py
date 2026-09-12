@@ -29,5 +29,8 @@ class DemCollector:
                 location=latest_row["district"],
                 status="Collected",
                 confidence=1.0,
+
+
+                 
 )
                 

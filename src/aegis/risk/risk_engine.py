@@ -26,7 +26,10 @@ class RiskEngine:
                 dem_assessment=None,
 
                 reasons=["Some required evidence is missing"],
-                recommended_actions= ["Rerun the process"]
+                recommended_actions= ["Rerun the process"],
+
+                confidence = 0.0,
+                calculated_at=datetime.now()
 
             )
 
